@@ -1,0 +1,202 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&family=Source+Sans+Pro:ital,wght@0,400;1,300;1,400&display=swap");
+
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+
+:root {
+    --clr-pale-blue: hsl(225, 100%, 94%);
+    --clr-bright-blue: hsl(245, 75%, 52%);
+    --clr-very-pale-blue: hsl(225, 100%, 98%);
+    --clr-unsaturated-blue: hsl(224, 23%, 55%);
+    --clr-dark-blue: hsl(223, 47%, 23%);
+    --clr-bright-blue-lite: hsl(245, 75%, 52%, 0.8);
+    --font: "Red Hat Display", sans-serif;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    font-family: var(--font);
+    background: url(../images/pattern-background-mobile.svg),
+        var(--clr-pale-blue);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.card {
+    background-color: #fff;
+    height: 569px;
+    max-width: 400px;
+    margin: 70px 24px;
+    border-radius: 24px;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0px 12px 12px hsl(223, 47%, 23%, 0.1);
+}
+
+.card__body {
+    padding: 25px 0px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.card__img {
+    max-width: 100%;
+}
+
+.card__title {
+    color: var(--clr-dark-blue);
+    font-size: 1.4rem;
+    font-weight: 900;
+}
+
+p {
+    color: var(--clr-unsaturated-blue);
+    font-size: 15px;
+    line-height: 1.6rem;
+}
+
+.card__p {
+    padding: 10px;
+    align-self: center;
+    width: 85%;
+}
+
+.card__music {
+    background-color: hsl(225, 100%, 94%, 0.35);
+    height: 75px;
+    width: 85%;
+    padding: 20px 0px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 14px;
+}
+
+.card__music-left {
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.card__music-plan h2 {
+    color: var(--clr-dark-blue);
+    font-size: 14px;
+    font-weight: 900;
+}
+
+.card__music-plan p {
+    font-size: 14px;
+}
+
+.card__music-right a {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--clr-bright-blue);
+}
+
+.card__music-right a:hover {
+    text-decoration: none;
+    font-weight: 700;
+    color: var(--clr-bright-blue-lite);
+}
+
+.btn {
+    font-family: inherit;
+    width: 80%;
+    margin: auto;
+    border: none;
+    font-size: inherit;
+    font-weight: 700;
+}
+
+.payment-btn {
+    background-color: var(--clr-bright-blue);
+    padding: 16px;
+    margin-top: 10px;
+    border-radius: 12px;
+    color: var(--clr-very-pale-blue);
+    box-shadow: 0 20px 20px 0 hsl(245, 75%, 52%, 0.2);
+}
+
+.payment-btn:hover {
+    background-color: var(--clr-bright-blue-lite);
+}
+
+.cancel-btn {
+    background-color: transparent;
+    color: var(--clr-unsaturated-blue);
+}
+
+.cancel-btn:hover {
+    color: var(--clr-dark-blue);
+}
+
+@media (min-width: 480px) {
+    body {
+        background: url("../images/pattern-background-desktop.svg"),
+            var(--clr-pale-blue);
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+
+    .card {
+        max-width: 450px;
+        height: 700px;
+        margin: auto;
+        margin-top: 100px;
+    }
+
+    .card__title {
+        font-size: 1.8rem;
+        font-weight: 900;
+        margin-top: 14px;
+    }
+
+    .card__p {
+        font-size: 17px;
+        margin-top: -4px;
+    }
+
+    .card__music {
+        height: 90px;
+        width: 80%;
+        padding: 20px;
+        justify-content: space-between;
+    }
+
+    .card__music-left {
+        width: 52%;
+        justify-content: space-between;
+    }
+
+    .card__music-plan h2 {
+        font-size: 17px;
+        font-weight: 900;
+    }
+
+    .card__music-plan p {
+        font-size: 17px;
+    }
+
+    .payment-btn {
+        margin-top: 16px;
+    }
+
+    .cancel-btn {
+        margin-top: 16px;
+        font-weight: 900;
+    }
+}
